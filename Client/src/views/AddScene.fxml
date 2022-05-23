@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" prefHeight="400.0" prefWidth="749.0" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="364.0" prefWidth="546.0">
+         <children>
+            <VBox layoutX="14.0" layoutY="10.0" prefHeight="274.0" prefWidth="123.0" spacing="24.0">
+               <children>
+                  <Label text="Name" />
+                  <Label text="Source" />
+                  <Label text="Destination" />
+                  <Label text="Date" />
+                  <Label text="Arrival Time" />
+                  <Label text="Depart Time" />
+                  <Label text="Number of Passenger" />
+               </children>
+            </VBox>
+            <VBox layoutX="157.0" layoutY="10.0" prefHeight="274.0" prefWidth="373.0" spacing="15.0">
+               <children>
+                  <TextField fx:id="tfName" />
+                  <TextField fx:id="tfSource" />
+                  <TextField fx:id="tfDestination" />
+                  <TextField fx:id="tfDate" />
+                  <TextField fx:id="tfArrivalTime" />
+                  <TextField fx:id="tfDepartTime" />
+                  <TextField fx:id="tfNumOfP" />
+               </children>
+            </VBox>
+            <Button fx:id="btnCreate" layoutX="65.0" layoutY="306.0" mnemonicParsing="false" onAction="#btnCreateClick" prefHeight="26.0" prefWidth="72.0" text="Create" />
+            <Button fx:id="btnUpdate" layoutX="157.0" layoutY="307.0" mnemonicParsing="false" onAction="#btnUpdateClick" prefHeight="26.0" prefWidth="72.0" text="Update" />
+            <Button fx:id="btnDelete" layoutX="465.0" layoutY="307.0" mnemonicParsing="false" onAction="#btnDeleteClick" prefHeight="26.0" prefWidth="61.0" text="Delete" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

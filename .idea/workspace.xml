@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="946f7227-fdf7-4136-a673-a57da3e1bd21" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/MainScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MainScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Controllers/AddController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Controllers/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/resources/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/sample/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/views/AddScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/views/MainScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,16 +33,27 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="jdk.selected.JAVA_MODULE" value="11 (4)" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/javafx-sdk-11.0.2/lib" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.1484375" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\AirportManagment-Gr12\Client\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sample" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11 (2)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <module name="AirportManagment" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\Admin\Desktop\javafx-sdk-18.0.1\lib --add-modules javafx.controls,javafx.fxml " />
+      <module name="Client" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\Admin\Desktop\javafx-sdk-18.0.1\lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.*" />
@@ -111,6 +127,17 @@
       <updated>1653307354467</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
