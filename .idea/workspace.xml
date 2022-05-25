@@ -2,12 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="946f7227-fdf7-4136-a673-a57da3e1bd21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/src/Controllers/AddController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/resources/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/sample/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/views/AddScene.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/views/MainScene.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/Client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/preview/preview1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/preview/preview2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/preview/preview3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/preview/preview4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/BookingEditSceneControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/CustomerEditSceneControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/FlightEditSceneControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/LoginSceneControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/MainControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/MenuSceneControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/PlaneEditSceneControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/ViewBookingSceneControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/ViewCustomerSceneControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/ViewFlightSceneControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/ViewPlaneSceneControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Airline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/BookingTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Flight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/FlightTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Plane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Schedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/AdminData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/AirlineData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/BookingData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/BookingTableData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/CustomerData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/DataConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/FlightData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/FlightTableData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/PlaneData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/ScheduleData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/BookingEditScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/CustomerEditScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/FlightsEditScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/LoginScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/MKX Title.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/MenuScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/PlaneEditScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/ViewBookingScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/ViewCustomersScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/ViewFlightsScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/ViewPlaneScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AirportManagment-Gr12.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AirportManagment-Gr12.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,29 +79,47 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11 (4)" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/javafx-sdk-11.0.2/lib" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javafx-sdk-18.0.1/lib" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.1484375" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\FINAL\AirportManagment-Gr12" />
       <recent name="C:\Users\Admin\Desktop\AirportManagment-Gr12\Client\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="sample" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11 (2)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <option name="MAIN_CLASS_NAME" value="Presentation.Main" />
       <module name="Client" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\Admin\Desktop\javafx-sdk-18.0.1\lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\Admin\Desktop\javafx-sdk-18.0.1\lib --add-modules javafx.controls,javafx.fxml " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Presentation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="P" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11 (4)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="AirportManagment-Gr12" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\Admin\Desktop\javafx-sdk-18.0.1\lib --add-modules javafx.controls,javafx.fxml " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.*" />
@@ -111,9 +177,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.P" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.P" />
       </list>
     </recent_temporary>
   </component>
@@ -138,6 +209,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
