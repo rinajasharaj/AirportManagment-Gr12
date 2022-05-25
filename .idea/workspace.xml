@@ -1,63 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="946f7227-fdf7-4136-a673-a57da3e1bd21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/Client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/preview/preview1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/preview/preview2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/preview/preview3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/preview/preview4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/BookingEditSceneControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/CustomerEditSceneControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/FlightEditSceneControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/LoginSceneControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/MainControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/MenuSceneControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/PlaneEditSceneControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/ViewBookingSceneControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/ViewCustomerSceneControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/ViewFlightSceneControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/Control/ViewPlaneSceneControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Airline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/BookingTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/FlightTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Plane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Application/DataTypes/Schedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/AdminData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/AirlineData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/BookingData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/BookingTableData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/CustomerData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/DataConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/FlightData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/FlightTableData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/PlaneData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/DataAccess/ScheduleData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/BookingEditScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/CustomerEditScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/FlightsEditScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/LoginScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/MKX Title.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/MenuScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/PlaneEditScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/ViewBookingScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/ViewCustomersScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/ViewFlightsScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/ViewPlaneScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/Presentation/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AirportManagment-Gr12.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AirportManagment-Gr12.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="946f7227-fdf7-4136-a673-a57da3e1bd21" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
