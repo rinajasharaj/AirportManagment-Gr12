@@ -1,9 +1,7 @@
 # Project exclude paths
-/out/
-/.idea
+out/
+.idea/
 /out
-/src/DataAccess/UserPass.java
-/src/Client.iml
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
