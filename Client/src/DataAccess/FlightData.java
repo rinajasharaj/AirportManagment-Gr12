@@ -57,7 +57,7 @@ public class FlightData {
     public static void insertFlight(Flight flight)
     {
         try{
-            statement.executeUpdate("INSERT INTO flight VALUE(default, " + flight.getPlane_id() + ", " + flight.getAirline_id() + ", " + flight.getSchedule_id() + ", " + flight.getFirst_class_left() + ", " + flight.getCoach_left() + ", " + flight.getEconomy_left() + ", " + flight.getPrice() +");");
+            statement.executeUpdate("INSERT INTO flight(plane_id,airline_id,schedule_id,price) VALUES(" + flight.getPlane_id() + ", " + flight.getAirline_id() + ", " + flight.getSchedule_id() + ", " + flight.getPrice() +");");
         }
 
         catch(Exception e){
