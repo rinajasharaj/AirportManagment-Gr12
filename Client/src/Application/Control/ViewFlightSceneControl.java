@@ -63,13 +63,13 @@ public class ViewFlightSceneControl {
             flight = FlightEditSceneControl.getFlight();
 
             //getting the seat info from plane database
-            for(Plane p: PlaneData.getPlanes()){
-                if(p.getPlane_id()==flight.getPlane_id()){
-                    flight.setFirst_class_left(p.getFirst_class());
-                    flight.setCoach_left(p.getCoach());
-                    flight.setEconomy_left(p.getEconomy());
-                }
-            }
+//            for(Plane p: PlaneData.getPlanes()){
+//                if(p.getPlane_id()==flight.getPlane_id()){
+//                    flight.setFirst_class_left(p.getFirst_class());
+//                    flight.setCoach_left(p.getCoach());
+//                    flight.setEconomy_left(p.getEconomy());
+//                }
+//            }
 
             FlightData.insertFlight(flight); //add flight to database
 
