@@ -1,7 +1,6 @@
 package Presentation;
 
 import Application.Control.*;
-import DataAccess.DataConnection;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -24,5 +23,6 @@ public class Main extends Application{
         MainControl.showLoginScene();
 
     }
+
 
 }

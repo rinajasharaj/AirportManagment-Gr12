@@ -1,24 +1,31 @@
 package DataAccess;
 
 import Application.DataTypes.Plane;
+import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 
 import java.io.FileOutputStream;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
 import java.sql.*;
+
 
 public class PlaneData {
 
     //fields
     private static Statement statement;
     private static ObservableList<Plane> planes;
+    private Gson gson = new Gson();
+    private static String url = "http://127.0.0.1:8000/api/plane/";
 
 
     //get planes
     public static ObservableList<Plane> getPlanes(){
         planes = FXCollections.observableArrayList();
-
+        PlaneFetch p=new PlaneFetch();
         try{
             statement = DataConnection.getConnection().createStatement();
             ResultSet rs = statement.executeQuery("SELECT* FROM plane");
