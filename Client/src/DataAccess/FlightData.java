@@ -4,8 +4,15 @@ import Application.DataTypes.Flight;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -18,40 +25,42 @@ public class FlightData {
     //fields
     private static Statement statement;
     private static ObservableList<Flight> flights;
+    private static String url = "http://127.0.0.1:8000/api/flight/";
 
 
     //get flights
     public static ObservableList<Flight> getFlight(){
         flights = FXCollections.observableArrayList();
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(url))
+                .build();
+        try {
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+            System.out.println(response.body());
+            JSONArray flight=new JSONArray(response.body());
+            for(int i=0;i<flight.length();i++){
+                JSONObject flightss= flight.getJSONObject(i);
+                int flight_id=flightss.getInt("flight_id");
+                int plane_id1= flightss.getInt("plane_id1");
+                int airline_id1= flightss.getInt("airline_id1");
+                int schedule_id1= flightss.getInt("airline_id1");
+                Double price=flightss.getDouble("price");
 
-        try{
-            statement = DataConnection.getConnection().createStatement();
-            ResultSet rs = statement.executeQuery("SELECT* FROM flight");
-//            ResultSet rs = statement.executeQuery("select flight_id, plane_id1, airline_id1, schedule_id1, first_class, coach, economy, price\n" +
-//                    "\t\t\t\t\tFROM flight f JOIN  schedule s \n" +
-//                    "                    ON f.schedule_id1 = s.schedule_id \n" +
-//                    "                    JOIN airline a \n" +
-//                    "                    ON f.airline_id1 = a.airline_id \n" +
-//                    "                    JOIN plane p\n" +
-//                    "                    ON f.plane_id1 = p.plane_id;");
+                Flight f = new Flight();
+                f.setFlight_id(flight_id);
+                f.setPlane_id(plane_id1);
+                f.setAirline_id(airline_id1);
+                f.setSchedule_id(schedule_id1);
+                f.setPrice(price);
 
-            if(rs != null)
-                while (rs.next()) {
-                    Flight flight = new Flight();
-                    flight.setFlight_id(rs.getInt(1));
-                    flight.setPlane_id(rs.getInt(2));
-                    flight.setAirline_id(rs.getInt(3));
-                    flight.setSchedule_id(rs.getInt(4));
-                    flight.setFirst_class_left(rs.getInt(5));
-                    flight.setCoach_left(rs.getInt(6));
-                    flight.setEconomy_left(rs.getInt(7));
-                    flight.setPrice(rs.getDouble(8));
+                flights.add(f);
 
-                    flights.add(flight);
-                }
-        }
-
-        catch(Exception e){
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
@@ -63,8 +72,17 @@ public class FlightData {
     //method to add a flight
     public static void insertFlight(Flight flight)
     {
-        try{
-            statement.executeUpdate("INSERT INTO flight(plane_id1,airline_id1,schedule_id1,price) VALUES(" + flight.getPlane_id() + ", " + flight.getAirline_id() + ", " + flight.getSchedule_id() + ", " + flight.getPrice() +");");
+        try {
+            HttpClient client = HttpClient.newHttpClient();
+            String input = "{ \"plane_id1\":\"" + flight.getPlane_id() + "\", \"airline_id1\":\"" + flight.getAirline_id() + "\", \"schedule_id1\":\"" + flight.getSchedule_id() + "\", \"price\":\"" + flight.getPrice() + "\" }";
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .header("Content-Type", "application/json")
+                    .POST(HttpRequest.BodyPublishers.ofString(input))
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
         }
 
         catch(Exception e){
@@ -76,7 +94,17 @@ public class FlightData {
     //method to update a flight
     public static void updateFlight(Flight flight){
         try{
-            statement.executeUpdate("UPDATE flight SET plane_id1 = "+flight.getPlane_id()+", schedule_id1 = "+flight.getSchedule_id()+", airline_id1 = "+flight.getAirline_id()+", first_class_left = "+flight.getFirst_class_left()+", coach_left = "+flight.getCoach_left()+",economy_left = "+flight.getEconomy_left()+",price = "+flight.getPrice()+" WHERE flight_id = "+flight.getFlight_id()+ ";");
+            String urlpatch = url+flight.getFlight_id()+"/";
+            HttpClient client = HttpClient.newHttpClient();
+            String input = "{ \"plane_id1\":\"" + flight.getPlane_id() + "\", \"airline_id1\":\"" + flight.getAirline_id() + "\", \"schedule_id1\":\"" + flight.getSchedule_id() + "\", \"price\":\"" + flight.getPrice() + "\" }";
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(urlpatch))
+                    .method("PATCH", HttpRequest.BodyPublishers.ofString(input))
+                    .header("Content-Type", "application/json")
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
         }
 
         catch(Exception e){

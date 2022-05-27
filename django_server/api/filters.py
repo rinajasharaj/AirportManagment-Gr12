@@ -29,4 +29,4 @@ class  ScheduleFilter(filters.FilterSet):
 class  FlightFilter(filters.FilterSet): 
     class Meta:
         model = Flight
-        fields=['flight_id','first_class_left','economy_left','coach_left','price','plane_id1','airline_id1','schedule_id1']
+        fields=['flight_id','price','plane_id1','airline_id1','schedule_id1']

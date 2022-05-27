@@ -50,10 +50,7 @@ class ScheduleSerializer(serializers.ModelSerializer):
       fields=['schedule_id','departure_date','departure_time','arrival_date','arrival_time']
 
 class FlightSerializer(serializers.ModelSerializer):
-    first_class_left = serializers.IntegerField()
-    economy_left = serializers.IntegerField()
-    coach_left = serializers.IntegerField()
     price = serializers.FloatField()
     class Meta:
       model=Flight
-      fields=['flight_id','first_class_left','economy_left','coach_left','price','plane_id1','airline_id1','schedule_id1']
+      fields=['flight_id','price','plane_id1','airline_id1','schedule_id1']
