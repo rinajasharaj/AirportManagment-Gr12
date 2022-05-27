@@ -38,7 +38,7 @@ public class ScheduleData {
         try {
             HttpResponse<String> response = client.send(request,
                     HttpResponse.BodyHandlers.ofString());
-            System.out.println(response.body());
+            //System.out.println(response.body());
             JSONArray schedule=new JSONArray(response.body());
             for(int i=0;i<schedule.length();i++){
                 JSONObject scheduleobj= schedule.getJSONObject(i);

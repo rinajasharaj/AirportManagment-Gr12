@@ -54,3 +54,17 @@ class Schedule(models.Model):
     class Meta:
         managed = False
         db_table = 'schedule'
+
+class Flight(models.Model):
+    flight_id = models.AutoField(primary_key=True)
+    plane_id1 = models.ForeignKey('Plane', models.DO_NOTHING, db_column='plane_id1')
+    airline_id1 = models.ForeignKey(Airline, models.DO_NOTHING, db_column='airline_id1')
+    schedule_id1 = models.ForeignKey('Schedule', models.DO_NOTHING, db_column='schedule_id1')
+    first_class_left = models.IntegerField(blank=True, null=True)
+    economy_left = models.IntegerField(blank=True, null=True)
+    coach_left = models.IntegerField(blank=True, null=True)
+    price = models.FloatField()
+
+    class Meta:
+        managed = False
+        db_table = 'flight'
