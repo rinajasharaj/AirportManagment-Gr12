@@ -10,9 +10,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 
-/**
- * Created by Petru on 18-May-16.
- */
+
 
 public class MenuScene {
 
@@ -35,7 +33,7 @@ public class MenuScene {
         quoteLabel.relocate(50,520);
 
         //welcomeLabel
-        welcomeLabel = new Label("      Welcome\n\t   to\n Hermes Airlines");
+        welcomeLabel = new Label("      Welcome\n\t   to\n Prishtina International Airport");
         welcomeLabel.setId("welcome");
         welcomeLabel.setAlignment(Pos.CENTER);
         welcomeLabel.relocate(810,90);

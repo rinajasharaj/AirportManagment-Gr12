@@ -2,9 +2,7 @@ package Application.DataTypes;
 
 import javafx.beans.property.*;
 
-/**
- * Created by Petru on 18-May-16.
- */
+
 
 public class Booking {
 

@@ -9,9 +9,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-/**
- * Created by Administrator on 5/18/2016.
- */
+
 
 public class ViewPlaneScene {
 

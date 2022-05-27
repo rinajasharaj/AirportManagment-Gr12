@@ -9,9 +9,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 
-/**
- * Created by Administrator on 5/22/2016.
- */
 
 public class ViewCustomerSceneControl {
 

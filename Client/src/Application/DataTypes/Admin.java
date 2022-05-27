@@ -1,8 +1,5 @@
 package Application.DataTypes;
 
-/**
- * Created by Petru on 18-May-16.
- */
 
 public class Admin {
 

@@ -5,9 +5,6 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 
-/**
- * Created by Petru on 18-May-16.
- */
 
 public class Flight {
 

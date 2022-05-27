@@ -8,9 +8,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 
-/**
- * Created by Administrator on 5/19/2016.
- */
+
 
 public class ViewPlaneSceneControl {
 

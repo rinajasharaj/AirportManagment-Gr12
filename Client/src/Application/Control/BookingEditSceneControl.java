@@ -9,9 +9,6 @@ import javafx.util.Callback;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-/**
- * Created by Petru on 26-May-16.
- */
 
 public class BookingEditSceneControl {
 
@@ -295,13 +292,13 @@ public class BookingEditSceneControl {
                 flightDates.add(f.getDeparture_date());
         }
 
-        if (flightDates.isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.initOwner(MainControl.getWindow());
-            alert.setHeaderText("No flights available");
-            alert.setContentText("There are no flights available on this route");
-            alert.showAndWait();
-        }
+//        if (flightDates.isEmpty()) {
+//            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+//            alert.initOwner(MainControl.getWindow());
+//            alert.setHeaderText("No flights available");
+//            alert.setContentText("There are no flights available on this route");
+//            alert.showAndWait();
+//        }
 
             final Callback<DatePicker, DateCell> dayCellFactory = new Callback<DatePicker, DateCell>() {
                 @Override

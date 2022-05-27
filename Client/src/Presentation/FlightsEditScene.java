@@ -18,9 +18,7 @@ import java.awt.*;
 import java.awt.geom.Arc2D;
 
 
-/**
- * Created by Administrator on 5/24/2016.
- */
+
 
 public class FlightsEditScene {
 

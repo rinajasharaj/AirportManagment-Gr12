@@ -12,9 +12,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- * Created by Administrator on 5/22/2016.
- */
+
 
 public class CustomerEditScene {
 

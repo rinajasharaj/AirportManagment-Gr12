@@ -6,9 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-/**
- * Created by Administrator on 5/22/2016.
- */
+
 
 public class CustomerEditSceneControl {
 

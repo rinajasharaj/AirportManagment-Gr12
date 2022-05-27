@@ -7,9 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 
-/**
- * Created by Administrator on 5/21/2016.
- */
 
 public class PlaneEditSceneControl {
 

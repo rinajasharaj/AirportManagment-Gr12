@@ -11,9 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
-/**
- * Created by DragonClau on 19/5/2016.
- */
+
 
 public class ViewCustomersScene {
 

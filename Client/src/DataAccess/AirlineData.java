@@ -14,9 +14,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.sql.*;
 
-/**
- * Created by Petru on 19-May-16.
- */
+
 
 public class AirlineData {
 

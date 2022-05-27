@@ -5,9 +5,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-/**
- * Created by Petru on 18-May-16.
- */
+
 
 public class Customer {
 

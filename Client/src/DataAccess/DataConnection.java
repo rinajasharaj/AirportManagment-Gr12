@@ -3,9 +3,7 @@ package DataAccess;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-/**
- * Created by Petru on 19-May-16.
- */
+
 
 public class DataConnection {
 

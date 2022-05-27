@@ -11,9 +11,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- * Created by Petru on 5/26/2016.
- */
+
 
 public class BookingEditScene {
 

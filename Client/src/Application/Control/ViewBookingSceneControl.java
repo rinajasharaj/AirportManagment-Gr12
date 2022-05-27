@@ -12,9 +12,7 @@ import javafx.scene.control.*;
 import java.time.LocalDate;
 import java.util.Optional;
 
-/**
- * Created by Petru on 26-May-16.
- */
+
 
 public class ViewBookingSceneControl {
 

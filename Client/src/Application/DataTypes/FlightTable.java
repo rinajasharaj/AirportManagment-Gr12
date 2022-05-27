@@ -4,9 +4,7 @@ import javafx.beans.property.*;
 
 import java.util.Date;
 
-/**
- * Created by Administrator on 5/24/2016.
- */
+
 
 public class FlightTable {
     //fields

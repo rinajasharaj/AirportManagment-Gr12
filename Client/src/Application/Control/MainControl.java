@@ -7,9 +7,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-/**
- * Created by Administrator on 5/19/2016.
- */
 
 public class MainControl {
 
@@ -28,7 +25,7 @@ public class MainControl {
 
         //set scene
         window.setScene(MenuScene.getScene());
-        window.setTitle("Hermes Airlines™");
+        window.setTitle("Prishtina International Airport™");
         window.centerOnScreen();
 
     }
@@ -48,7 +45,7 @@ public class MainControl {
 
         //set scene
         window.setScene(LoginScene.getScene());
-        window.setTitle("Hermes Airlines™");
+        window.setTitle("Prishtina International Airport™");
         window.getIcons().add(new Image("/Presentation/icon.png"));
 
         window.show();
@@ -66,7 +63,7 @@ public class MainControl {
 
         //set scene
         window.setScene(ViewBookingScene.getScene());
-        window.setTitle("Hermes Airlines™  -  Bookings");
+        window.setTitle("Prishtina International Airport™  -  Bookings");
     }
 
 
@@ -80,7 +77,7 @@ public class MainControl {
 
         //set scene
         window.setScene(ViewCustomersScene.getScene());
-        window.setTitle("Hermes Airlines™  -  Customers");
+        window.setTitle("Prishtina International Airport™  -  Customers");
     }
 
 
@@ -94,7 +91,7 @@ public class MainControl {
 
         //set scene
         window.setScene(ViewFlightsScene.getScene());
-        window.setTitle("Hermes Airlines™  -  Flights");
+        window.setTitle("Prishtina International Airport™  -  Flights");
     }
 
 
@@ -108,7 +105,7 @@ public class MainControl {
 
         //set scene
         window.setScene(ViewPlaneScene.getScene());
-        window.setTitle("Hermes Airlines™  -  Planes");
+        window.setTitle("Prishtina International Airport™  -  Planes");
     }
 
 

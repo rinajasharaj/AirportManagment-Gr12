@@ -5,9 +5,6 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 
-/**
- * Created by Administrator on 5/19/2016.
- */
 
 public class MenuSceneControl {
 

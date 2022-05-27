@@ -7,9 +7,7 @@ import javafx.collections.ObservableList;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-/**
- * Created by Petru on 26-May-16.
- */
+
 
 public class BookingTableData {
 

@@ -17,9 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- * Created by Administrator on 5/19/2016.
- */
+
 
 public class ScheduleData {
 

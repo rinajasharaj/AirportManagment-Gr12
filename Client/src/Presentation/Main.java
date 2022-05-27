@@ -5,7 +5,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 
 /**
- * MAIN CLASS - HERMES AIRLINES ---
+ * MAIN CLASS - Prishtina International Airport ---
  */
 
 

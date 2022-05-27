@@ -9,9 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-/**
- * Created by Administrator on 5/18/2016.
- */
+
 
 public class LoginScene {
 
@@ -35,7 +33,7 @@ public class LoginScene {
 
 
         //hermesLabel
-        hermesLabel=new Label("Hermes Airlines");
+        hermesLabel=new Label("Prishtina International Airport");
         hermesLabel.setId("welcome");
 
         //usernameField

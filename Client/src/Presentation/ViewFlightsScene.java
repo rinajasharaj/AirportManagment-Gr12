@@ -10,9 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
-/**
- * Created by Petru on 18-May-16.
- */
+
 
 public class ViewFlightsScene {
 

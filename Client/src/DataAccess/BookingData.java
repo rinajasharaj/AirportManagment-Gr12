@@ -15,9 +15,7 @@ import java.net.http.HttpResponse;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-/**
- * Created by Administrator on 5/19/2016.
- */
+
 
 public class BookingData {
 

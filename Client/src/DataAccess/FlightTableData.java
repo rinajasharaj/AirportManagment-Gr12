@@ -7,9 +7,7 @@ import javafx.collections.ObservableList;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-/**
- * Created by Administrator on 5/24/2016.
- */
+
 
 public class FlightTableData {
 

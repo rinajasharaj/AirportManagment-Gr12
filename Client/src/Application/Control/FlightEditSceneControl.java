@@ -19,9 +19,6 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-/**
- * Created by Administrator on 5/25/2016.
- */
 
 public class FlightEditSceneControl {
 
