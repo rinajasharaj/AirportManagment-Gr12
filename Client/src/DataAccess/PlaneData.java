@@ -1,15 +1,18 @@
 package DataAccess;
 
 import Application.DataTypes.Plane;
-import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.sql.*;
 
 
@@ -18,32 +21,42 @@ public class PlaneData {
     //fields
     private static Statement statement;
     private static ObservableList<Plane> planes;
-    private Gson gson = new Gson();
     private static String url = "http://127.0.0.1:8000/api/plane/";
 
 
     //get planes
     public static ObservableList<Plane> getPlanes(){
         planes = FXCollections.observableArrayList();
-        PlaneFetch p=new PlaneFetch();
-        try{
-            statement = DataConnection.getConnection().createStatement();
-            ResultSet rs = statement.executeQuery("SELECT* FROM plane");
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(url))
+                .build();
+        try {
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+            System.out.println(response.body());
+            JSONArray plane=new JSONArray(response.body());
+            for(int i=0;i<plane.length();i++){
+                JSONObject planee= plane.getJSONObject(i);
+                int plane_id=planee.getInt("plane_id");
+                String plane_name= planee.getString("plane_name");
+                int first_class=planee.getInt("first_class");
+                int coach=planee.getInt("coach");
+                int economy=planee.getInt("economy");
 
-            if(rs != null)
-                while (rs.next()) {
-                    Plane plane = new Plane();
-                    plane.setPlane_id(rs.getInt(1));
-                    plane.setFirst_class(rs.getInt(3));
-                    plane.setCoach(rs.getInt(4));
-                    plane.setEconomy(rs.getInt(5));
-                    plane.setPlane_name(rs.getString(2));
+                Plane p = new Plane();
+                p.setPlane_id(plane_id);
+                p.setFirst_class(first_class);
+                p.setCoach(coach);
+                p.setEconomy(economy);
+                p.setPlane_name(plane_name);
 
-                    planes.add(plane);
-                }
-        }
+                planes.add(p);
 
-        catch(Exception e){
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
