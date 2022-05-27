@@ -36,7 +36,7 @@ public class PlaneData {
         try {
             HttpResponse<String> response = client.send(request,
                     HttpResponse.BodyHandlers.ofString());
-            System.out.println(response.body());
+          //  System.out.println(response.body());
             JSONArray plane=new JSONArray(response.body());
             for(int i=0;i<plane.length();i++){
                 JSONObject planee= plane.getJSONObject(i);
@@ -95,7 +95,7 @@ public class PlaneData {
     //method to update a plane details
     public static void updatePlane(Plane plane){
         try{
-            String urlpatch = "http://127.0.0.1:8000/api/plane/"+plane.getPlane_id()+"/";
+            String urlpatch = url+plane.getPlane_id()+"/";
             HttpClient client = HttpClient.newHttpClient();
             String input="{ \"plane_name\":\""+plane.getPlane_name()+"\", \"first_class\":\""+plane.getFirst_class()+"\", \"coach\":\""+plane.getCoach()+"\", \"economy\":\""+plane.getEconomy()+"\" }";
             HttpRequest request = HttpRequest.newBuilder()
