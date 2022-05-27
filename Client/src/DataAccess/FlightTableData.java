@@ -24,7 +24,7 @@ public class FlightTableData {
 
         try{
             statement = DataConnection.getConnection().createStatement();
-            ResultSet rs = statement.executeQuery("SELECT departure_date, departure_city, arrival_city, flight_id, price, first_class, economy " +
+            ResultSet rs = statement.executeQuery("SELECT departure_date, departure_city, arrival_city, flight_id, price, first_class, coach, economy " +
                     "FROM flight f JOIN  schedule s " +
                     "ON f.schedule_id = s.schedule_id " +
                     "JOIN airline a " +
