@@ -24,14 +24,15 @@ public class FlightTableData {
 
         try{
             statement = DataConnection.getConnection().createStatement();
-            ResultSet rs = statement.executeQuery("SELECT departure_date, departure_city, arrival_city, flight_id, price, first_class, coach, economy " +
-                    "FROM flight f JOIN  schedule s " +
-                    "ON f.schedule_id = s.schedule_id " +
-                    "JOIN airline a " +
-                    "ON f.airline_id = a.airline_id " +
-                    "JOIN plane p" +
-                    "ON f.plane_id = p.plane_id" +
-                    "ORDER BY departure_date;");
+
+            ResultSet rs = statement.executeQuery("SELECT departure_date, departure_city, arrival_city, flight_id, price, first_class, coach, economy\n" +
+                    "                    FROM flight f JOIN  schedule s \n" +
+                    "                    ON f.schedule_id1 = s.schedule_id \n" +
+                    "                    JOIN airline a \n" +
+                    "                    ON f.airline_id1 = a.airline_id \n" +
+                    "                    JOIN plane p\n" +
+                    "                    ON f.plane_id1 = p.plane_id\n" +
+                    "                    ORDER BY departure_date;");
 
             if(rs!=null)
                 while(rs.next()){

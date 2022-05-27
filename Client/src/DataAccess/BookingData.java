@@ -64,7 +64,7 @@ public class BookingData {
     //method to edit a booking
     public static void updateBooking(Booking booking){
         try{
-            statement.executeUpdate("UPDATE booking SET customer_id = " + booking.getCustomer_id() + ", flight_id = " + booking.getFlight_id() + ", class = '" + booking.getFare_class() + "' WHERE booking_id = " + booking.getBooking_id() + ";" );
+            statement.executeUpdate("UPDATE booking SET customer_id1 = " + booking.getCustomer_id() + ", flight_id1 = " + booking.getFlight_id() + ", class = '" + booking.getFare_class() + "' WHERE booking_id = " + booking.getBooking_id() + ";" );
         }
 
         catch(Exception e){

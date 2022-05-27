@@ -27,6 +27,13 @@ public class FlightData {
         try{
             statement = DataConnection.getConnection().createStatement();
             ResultSet rs = statement.executeQuery("SELECT* FROM flight");
+//            ResultSet rs = statement.executeQuery("select flight_id, plane_id1, airline_id1, schedule_id1, first_class, coach, economy, price\n" +
+//                    "\t\t\t\t\tFROM flight f JOIN  schedule s \n" +
+//                    "                    ON f.schedule_id1 = s.schedule_id \n" +
+//                    "                    JOIN airline a \n" +
+//                    "                    ON f.airline_id1 = a.airline_id \n" +
+//                    "                    JOIN plane p\n" +
+//                    "                    ON f.plane_id1 = p.plane_id;");
 
             if(rs != null)
                 while (rs.next()) {
@@ -57,7 +64,7 @@ public class FlightData {
     public static void insertFlight(Flight flight)
     {
         try{
-            statement.executeUpdate("INSERT INTO flight(plane_id,airline_id,schedule_id,price) VALUES(" + flight.getPlane_id() + ", " + flight.getAirline_id() + ", " + flight.getSchedule_id() + ", " + flight.getPrice() +");");
+            statement.executeUpdate("INSERT INTO flight(plane_id1,airline_id1,schedule_id1,price) VALUES(" + flight.getPlane_id() + ", " + flight.getAirline_id() + ", " + flight.getSchedule_id() + ", " + flight.getPrice() +");");
         }
 
         catch(Exception e){
@@ -69,7 +76,7 @@ public class FlightData {
     //method to update a flight
     public static void updateFlight(Flight flight){
         try{
-            statement.executeUpdate("UPDATE flight SET plane_id = "+flight.getPlane_id()+", schedule_id = "+flight.getSchedule_id()+", airline_id = "+flight.getAirline_id()+", first_class_left = "+flight.getFirst_class_left()+", coach_left = "+flight.getCoach_left()+",economy_left = "+flight.getEconomy_left()+",price = "+flight.getPrice()+" WHERE flight_id = "+flight.getFlight_id()+ ";");
+            statement.executeUpdate("UPDATE flight SET plane_id1 = "+flight.getPlane_id()+", schedule_id1 = "+flight.getSchedule_id()+", airline_id1 = "+flight.getAirline_id()+", first_class_left = "+flight.getFirst_class_left()+", coach_left = "+flight.getCoach_left()+",economy_left = "+flight.getEconomy_left()+",price = "+flight.getPrice()+" WHERE flight_id = "+flight.getFlight_id()+ ";");
         }
 
         catch(Exception e){

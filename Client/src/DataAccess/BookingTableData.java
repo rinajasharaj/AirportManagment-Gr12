@@ -24,16 +24,16 @@ public class BookingTableData {
 
         try{
             statement = DataConnection.getConnection().createStatement();
-            ResultSet rs = statement.executeQuery("SELECT departure_date, departure_city, arrival_city, first_name, last_name, booking_id " +
-                    "FROM booking b JOIN flight f " +
-                    "ON b.flight_id = f.flight_id " +
-                    "JOIN customer c " +
-                    "ON b.customer_id = c.customer_id " +
-                    "JOIN schedule s " +
-                    "ON f.schedule_id = s.schedule_id " +
-                    "JOIN airline a " +
-                    "ON f.airline_id = a.airline_id " +
-                    "ORDER BY departure_date;");
+            ResultSet rs = statement.executeQuery("SELECT departure_date, departure_city, arrival_city, first_name, last_name, booking_id\n" +
+                    "                    FROM booking b JOIN  flight f\n" +
+                    "                    ON b.flight_id1 = f.flight_id\n" +
+                    "                    JOIN customer c\n" +
+                    "                    ON b.customer_id1 = c.customer_id\n" +
+                    "                    JOIN schedule s\n" +
+                    "                    ON f.schedule_id1 = s.schedule_id\n" +
+                    "                    JOIN airline a\n" +
+                    "                    ON f.airline_id1 = a.airline_id\n" +
+                    "                    ORDER BY departure_date;");
 
             if(rs!=null)
                 while(rs.next()){
