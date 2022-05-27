@@ -114,7 +114,15 @@ public class BookingData {
     //method to remove a booking
     public static void deleteBooking(Booking booking){
         try{
-            statement.executeUpdate("DELETE FROM booking WHERE booking_id = " + booking.getBooking_id() + ";");
+            String urlpatch = url+booking.getBooking_id()+"/";
+            HttpClient client = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest
+                    .newBuilder()
+                    .DELETE()
+                    .uri(URI.create(urlpatch))
+                    .build();
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
         }
 
         catch(Exception e){
