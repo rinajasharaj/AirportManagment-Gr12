@@ -1,9 +1,11 @@
 package DataAccess;
 
 import Application.DataTypes.Plane;
+import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
+import org.apache.http.client.methods.HttpPost;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -68,13 +70,22 @@ public class PlaneData {
     //method to add a plane
     public static void insertPlanes(Plane plane)
     {
-        try{
-            statement.executeUpdate("INSERT INTO plane VALUE (default, '" + plane.getPlane_name() + "', " + plane.getFirst_class() + ", " + plane.getCoach() + ", " + plane.getEconomy() + ");");
+        try {
+            HttpClient client = HttpClient.newHttpClient();
+            String input="{ \"plane_name\":\""+plane.getPlane_name()+"\", \"first_class\":\""+plane.getFirst_class()+"\", \"coach\":\""+plane.getCoach()+"\", \"economy\":\""+plane.getEconomy()+"\" }";
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .header("Content-Type", "application/json")
+                    .POST(HttpRequest.BodyPublishers.ofString(input))
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+
             planes.add(plane);
             plane.setPlane_id(planes.indexOf(plane) + 1);
-        }
 
-        catch(Exception e){
+        }catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -84,7 +95,17 @@ public class PlaneData {
     //method to update a plane details
     public static void updatePlane(Plane plane){
         try{
-            statement.executeUpdate("UPDATE plane SET plane_name = '" + plane.getPlane_name() + "', first_class = " + plane.getFirst_class() + ", coach = " + plane.getCoach() + ", economy = " + plane.getEconomy() + " WHERE plane_id = " + plane.getPlane_id() + ";");
+            String urlpatch = "http://127.0.0.1:8000/api/plane/"+plane.getPlane_id()+"/";
+            HttpClient client = HttpClient.newHttpClient();
+            String input="{ \"plane_name\":\""+plane.getPlane_name()+"\", \"first_class\":\""+plane.getFirst_class()+"\", \"coach\":\""+plane.getCoach()+"\", \"economy\":\""+plane.getEconomy()+"\" }";
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(urlpatch))
+                    .method("PATCH", HttpRequest.BodyPublishers.ofString(input))
+                    .header("Content-Type", "application/json")
+                    .build();
+
+            HttpResponse<String> response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
             planes.set(plane.getPlane_id() - 1, plane);
         }
 
