@@ -5,10 +5,10 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view, parser_classes
 from rest_framework.parsers import JSONParser
-from .models import Admin, Airline,Customer,Plane,Schedule,Flight
-from .serializers import AdminSerializer,AirlineSerializer,CustomerSerializer,PlaneSerializer,ScheduleSerializer,FlightSerializer
+from .models import Admin, Airline,Customer,Plane,Schedule,Flight,Booking
+from .serializers import AdminSerializer,AirlineSerializer,CustomerSerializer,PlaneSerializer,ScheduleSerializer,FlightSerializer,BookingSerializer
 from rest_framework import status
-from .filters import AdminFilter,AirlineFilter,CustomerFilter,PlaneFilter,ScheduleFilter,FlightFilter
+from .filters import AdminFilter,AirlineFilter,CustomerFilter,PlaneFilter,ScheduleFilter,FlightFilter,BookingFilter
 
 
 @csrf_exempt
@@ -278,5 +278,50 @@ def flight_detail(request, pk):
 
 	elif request.method == 'DELETE':
 		flight.delete()
+		return HttpResponse(status=status.HTTP_204_NO_CONTENT)
+
+@csrf_exempt
+def booking_list(request):
+	if request.method=="GET":
+		book = Booking.objects.all()
+		filter = BookingFilter(request.GET, queryset=book)
+		if filter.is_valid():
+			book = filter.qs
+		serializer = BookingSerializer(book, many=True)
+
+		return JsonResponse(serializer.data, safe=False)
+
+	if request.method=='POST':
+		data = JSONParser().parse(request)
+		serializer = BookingSerializer(data=data)
+		if serializer.is_valid():
+			serializer.save()
+			return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+		return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+@csrf_exempt
+def booking_detail(request, pk):
+	try:
+		book = Booking.objects.get(pk=pk)
+	except Booking.DoesNotExist:
+		return HttpResponse(status=status.HTTP_400_BAD_REQUEST)
+
+	if request.method == 'GET':
+		serializer=BookingSerializer(book)
+		return JsonResponse(serializer.data)
+
+	elif request.method=="PATCH":
+		data = JSONParser().parse(request)
+		serializer = BookingSerializer(book, data=data)
+
+		if serializer.is_valid():
+			serializer.save()
+			return JsonResponse(serializer.data)
+		return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+	elif request.method == 'DELETE':
+		book.delete()
 		return HttpResponse(status=status.HTTP_204_NO_CONTENT)
 

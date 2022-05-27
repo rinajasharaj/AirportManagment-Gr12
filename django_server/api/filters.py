@@ -1,5 +1,5 @@
 from django_filters import rest_framework as filters
-from .models import Admin,Airline,Customer,Plane,Schedule,Flight
+from .models import Admin,Airline,Customer,Plane,Schedule,Flight,Booking
 
 class  AdminFilter(filters.FilterSet): 
     class Meta:
@@ -30,3 +30,8 @@ class  FlightFilter(filters.FilterSet):
     class Meta:
         model = Flight
         fields=['flight_id','price','plane_id1','airline_id1','schedule_id1']
+
+class  BookingFilter(filters.FilterSet):
+    class Meta:
+        model = Booking
+        fields=['booking_id','customer_id1','flight_id1','class_field']

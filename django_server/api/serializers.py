@@ -1,6 +1,6 @@
 from dataclasses import fields
 from rest_framework import serializers
-from api.models import Admin,Airline,Plane,Customer,Schedule,Flight
+from api.models import Admin,Airline,Plane,Customer,Schedule,Flight,Booking
 
 class AdminSerializer(serializers.ModelSerializer):
     first_name = serializers.CharField(max_length=255)
@@ -54,3 +54,9 @@ class FlightSerializer(serializers.ModelSerializer):
     class Meta:
       model=Flight
       fields=['flight_id','price','plane_id1','airline_id1','schedule_id1']
+
+class BookingSerializer(serializers.ModelSerializer):
+    class_field = serializers.CharField(max_length=255)
+    class Meta:
+      model=Booking
+      fields=['booking_id','customer_id1','flight_id1','class_field']

@@ -65,3 +65,13 @@ class Flight(models.Model):
     class Meta:
         managed = False
         db_table = 'flight'
+
+class Booking(models.Model):
+    booking_id = models.AutoField(primary_key=True)
+    customer_id1 = models.ForeignKey('Customer', models.DO_NOTHING, db_column='customer_id1')
+    flight_id1 = models.ForeignKey('Flight', models.DO_NOTHING, db_column='flight_id1')
+    class_field = models.CharField(db_column='class', max_length=255)  # Field renamed because it was a Python reserved word.
+
+    class Meta:
+        managed = False
+        db_table = 'booking'
