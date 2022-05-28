@@ -33,7 +33,7 @@ public class LoginScene {
 
 
         //hermesLabel
-        hermesLabel=new Label("Prishtina International Airport");
+        hermesLabel=new Label("");
         hermesLabel.setId("welcome");
 
         //usernameField

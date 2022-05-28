@@ -217,7 +217,7 @@ public class ViewBookingSceneControl {
         alert.initOwner(MainControl.getWindow());
         alert.setHeaderText("Remove booking");
         alert.setContentText("Are you sure you want to cancel " + bookingTable.getCustomer() + "'s booking?" +
-                "\nThe refund will be " + refund + " kr.");
+                "\nThe refund will be " + refund + "$");
 
         Optional<ButtonType> result = alert.showAndWait();
 
@@ -231,7 +231,7 @@ public class ViewBookingSceneControl {
             Alert alert1 = new Alert(Alert.AlertType.CONFIRMATION);
             alert1.initOwner(MainControl.getWindow());
             alert1.setContentText("Booking canceled!\n"
-                    + bookingTable.getCustomer() + " was refunded " + refund + " kr.");
+                    + bookingTable.getCustomer() + " was refunded " + refund + "$");
             alert1.showAndWait();
 
             //set left seats
@@ -284,11 +284,11 @@ public class ViewBookingSceneControl {
             categoryObs.setText(booking.getFare_class());
 
             if(booking.getFare_class().equalsIgnoreCase("first class"))
-            priceObs.setText(String.valueOf(flight.getPrice()+flight.getPrice()*1/2) + " kr.");
+            priceObs.setText(String.valueOf(flight.getPrice()+flight.getPrice()*1/2) + "$");
             else if(booking.getFare_class().equalsIgnoreCase("coach"))
-                priceObs.setText(String.valueOf((flight.getPrice()+flight.getPrice()*1/4) + " kr."));
+                priceObs.setText(String.valueOf((flight.getPrice()+flight.getPrice()*1/4) + "$"));
             else
-                priceObs.setText(String.valueOf(flight.getPrice() + " kr."));
+                priceObs.setText(String.valueOf(flight.getPrice() + "$"));
 
 
             first_nameObs.setText(customer.getFirst_name());

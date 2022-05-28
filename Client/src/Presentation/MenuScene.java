@@ -27,13 +27,16 @@ public class MenuScene {
     public static void initialize() {
 
         //quoteLabel
-        quoteLabel = new Label("\"The reason birds can fly and we can't is simply because\n " +
-                "\t\t\tthey have perfect faith, for to have faith is to have wings..\"");
+//        quoteLabel = new Label("\"The reason birds can fly and we can't is simply because\n " +
+//                "\t\t\tthey have perfect faith, for to have faith is to have wings..\"");
+        quoteLabel = new Label("\t\tWelcome to Prishtina \n " +
+                "\t\t\t\tInternational Airport");
         quoteLabel.setId("quote");
         quoteLabel.relocate(50,520);
 
         //welcomeLabel
-        welcomeLabel = new Label("      Welcome\n\t   to\n Prishtina International Airport");
+//        welcomeLabel = new Label("      Welcome\n\t   to\n Prishtina International Airport");
+        welcomeLabel = new Label("Welcome!");
         welcomeLabel.setId("welcome");
         welcomeLabel.setAlignment(Pos.CENTER);
         welcomeLabel.relocate(810,90);

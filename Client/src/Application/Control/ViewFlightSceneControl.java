@@ -38,8 +38,8 @@ public class ViewFlightSceneControl {
         editB = ViewFlightsScene.getEditB();
         editB.setOnAction(e -> handle_editB());
 
-        exportFlightsB = ViewFlightsScene.getExportFlightsB();
-        exportFlightsB.setOnAction(event -> handle_exportFlightsB());
+//        exportFlightsB = ViewFlightsScene.getExportFlightsB();
+//        exportFlightsB.setOnAction(event -> handle_exportFlightsB());
 
 
         search = ViewFlightsScene.getSearch();

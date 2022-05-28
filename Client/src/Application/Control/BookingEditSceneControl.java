@@ -95,6 +95,7 @@ public class BookingEditSceneControl {
             String flight_route = routeBox.getValue();
             String flight_date = departure_datePicker.getValue().toString();
 
+
             for (FlightTable f : FlightTableData.getFlightTableItems()) {
                 if (f.getDeparture_date().equalsIgnoreCase(flight_date) &&
                         (f.getDeparture_city() + " -> " + f.getArrival_city()).equalsIgnoreCase(flight_route)) {
@@ -130,12 +131,12 @@ public class BookingEditSceneControl {
                         }
 
                     if (firstC.isSelected())
-                        priceLabelObs.setText(String.valueOf(f.getPrice() + f.getPrice() * 1 / 2) + " kr.");
+                        priceLabelObs.setText(String.valueOf(f.getPrice() + f.getPrice() * 1 / 2) + "$");
                     else
                     if (coachC.isSelected())
-                        priceLabelObs.setText(String.valueOf(f.getPrice() + f.getPrice() * 1 / 4) + " kr.");
+                        priceLabelObs.setText(String.valueOf(f.getPrice() + f.getPrice() * 1 / 4) + " $");
 
-                    else priceLabelObs.setText(String.valueOf(f.getPrice()) + " kr.");
+                    else priceLabelObs.setText(String.valueOf(f.getPrice()) + "$");
 
                     break;
                 }
@@ -156,12 +157,12 @@ public class BookingEditSceneControl {
                         (f.getDeparture_city() + " -> " + f.getArrival_city()).equalsIgnoreCase(flight_route)) {
 
                     if (firstC.isSelected())
-                        priceLabelObs.setText(String.valueOf(f.getPrice() + f.getPrice() * 1 / 2) + " kr.");
+                        priceLabelObs.setText(String.valueOf(f.getPrice() + f.getPrice() * 1 / 2) + "$");
                     else
                     if (coachC.isSelected())
-                        priceLabelObs.setText(String.valueOf(f.getPrice() + f.getPrice() * 1 / 4) + " kr.");
+                        priceLabelObs.setText(String.valueOf(f.getPrice() + f.getPrice() * 1 / 4) + "$");
 
-                    else priceLabelObs.setText(String.valueOf(f.getPrice()) + " kr.");
+                    else priceLabelObs.setText(String.valueOf(f.getPrice()) + "$");
 
                     break;
                 }
