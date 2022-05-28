@@ -10,7 +10,7 @@ It includes an HTTP server (created with Python and Django), a TCP/UDP server (c
 The GUI is done with JavaFX.
 In this project we have worked a total of 5 people, for several days in a row.
 
-Për të startuar projektin sigurohuni që keni të instaluar Python dhe Django, gjithashtu që i keni të përfshira në projekt libraritë e nevojshme për JavaFX dhe MySQL DB Connectors.
+Për të startuar projektin sigurohuni që keni të instaluar Python dhe Django, gjithashtu që i keni të përfshira në projekt libraritë e nevojshme për JavaFX dhe MySQL DB Connectors.  
 Duhet krijuar .env file lokalisht dhe të jepen të dhënat për lidhje me server
 Kaloni në terminal dhe jepni komandat si në vazhdim:  
 1. python -m venv venv  
