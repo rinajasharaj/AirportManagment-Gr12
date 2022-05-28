@@ -12,23 +12,23 @@ In this project we have worked a total of 5 people, for several days in a row.
 
 Për të startuar projektin sigurohuni që keni të instaluar Python dhe Django, gjithashtu që i keni të përfshira në projekt libraritë e nevojshme për JavaFX dhe MySQL DB Connectors.
 Duhet krijuar .env file lokalisht dhe të jepen të dhënat për lidhje me server
-Kaloni në terminal dhe jepni komandat si në vazhdim:
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-cd django_server
-python -m makemigrations
-python -m migrate
-python -m runserver
+Kaloni në terminal dhe jepni komandat si në vazhdim:  
+1. python -m venv venv  
+2. venv\Scripts\activate  
+3. pip install -r requirements.txt  
+4. cd django_server  
+5. python -m makemigrations  
+6. python -m migrate  
+7. python -m runserver  
 
 To start the project make sure you have Python and Django installed, as well as the libraries required for JavaFX and MySQL DB Connectors.
-The .env file must be created locally and the server connection data provided.
-Go to the terminal and give the following commands:
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-cd django_server
-python -m makemigrations
-python -m migrate
-python -m runserver
+The .env file must be created locally and the server connection data provided.  
+Go to the terminal and give the following commands:  
+1. python -m venv venv  
+2. venv\Scripts\activate  
+3. pip install -r requirements.txt  
+4. cd django_server  
+5. python -m makemigrations  
+6. python -m migrate  
+7. python -m runserver  
 
