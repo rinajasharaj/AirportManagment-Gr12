@@ -9,3 +9,26 @@ The distributed system we have developed aims to manage flights at Prishtina Air
 It includes an HTTP server (created with Python and Django), a TCP/UDP server (created with Java) and a chat that enables text, voice and video communication.
 The GUI is done with JavaFX.
 In this project we have worked a total of 5 people, for several days in a row.
+
+Për të startuar projektin sigurohuni që keni të instaluar Python dhe Django, gjithashtu që i keni të përfshira në projekt libraritë e nevojshme për JavaFX dhe MySQL DB Connectors.
+Duhet krijuar .env file lokalisht dhe të jepen të dhënat për lidhje me server
+Kaloni në terminal dhe jepni komandat si në vazhdim:
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+cd django_server
+python -m makemigrations
+python -m migrate
+python -m runserver
+
+To start the project make sure you have Python and Django installed, as well as the libraries required for JavaFX and MySQL DB Connectors.
+The .env file must be created locally and the server connection data provided.
+Go to the terminal and give the following commands:
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+cd django_server
+python -m makemigrations
+python -m migrate
+python -m runserver
+
