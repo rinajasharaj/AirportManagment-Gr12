@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
@@ -21,14 +22,18 @@ public class LoginScene {
     private static TextField usernameField;
     private static PasswordField passwordField;
     private static Button loginButton;
-
+    private static ImageView img;
 
     //initialization of objects
     public static  void initialize(){
 
+        img = new ImageView("/Presentation/login.png");
+        img.setFitHeight(110);
+        img.setFitWidth(110);
+
         //loginLabel
         loginLabel = new Label("Log in");
-        loginLabel.setPadding((new Insets(0, 0, 30, 0)));
+        loginLabel.setPadding((new Insets(-90, 0, 30, 0)));
         loginLabel.setStyle("-fx-font-size: 24pt");
 
 
@@ -55,7 +60,7 @@ public class LoginScene {
         //layout
         loginLayout = new VBox(10);
         loginLayout.setAlignment(Pos.CENTER);
-        loginLayout.getChildren().addAll(hermesLabel,loginLabel,usernameField,passwordField,loginButton);
+        loginLayout.getChildren().addAll(img,hermesLabel,loginLabel,usernameField,passwordField,loginButton);
 
         //scene
         scene = new Scene(loginLayout,400,500);
