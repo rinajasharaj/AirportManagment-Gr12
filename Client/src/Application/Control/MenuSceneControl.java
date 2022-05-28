@@ -58,7 +58,7 @@ public class MenuSceneControl {
 
     //handle exitB
     public static void handle_exitsB(){
-        MainControl.getWindow().close();
+        MainControl.showVideo();
     }
 
 }

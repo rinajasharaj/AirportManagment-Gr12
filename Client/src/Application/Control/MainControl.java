@@ -3,9 +3,14 @@ package Application.Control;
 import Application.DataTypes.*;
 import DataAccess.DataConnection;
 import Presentation.*;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 
 public class MainControl {
@@ -177,6 +182,19 @@ public class MainControl {
 
     }
 
+    //client
+    public static void showVideo(){
+
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(MainControl.class.getResource("sample.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        window.setScene(new Scene(root, 478, 398));
+        window.setTitle("Client");
+
+    }
 
 
     //getters
