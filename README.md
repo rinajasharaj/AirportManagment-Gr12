@@ -21,6 +21,18 @@ Kaloni në terminal dhe jepni komandat si në vazhdim:
 6. python manage.py migrate  
 7. python manage.py runserver  
 
+Të dhënat që duhet të përfshijë .env file:
+SECRET_KEY=django-insecure-yp%8^jus_*-6x#-+%48&sk_b197y!4-lz=h%tktmdd_231h5wl
+DEBUG=TRUE
+NAME=hermes_airline
+User=Your database username
+Pass=Your database password
+
+Libraritë e nevojshme që duhen të përfshihen për të startuar klientin:
+1.JavaFx SDK
+2.MySQL connector
+3.JSON jar që suporton org.json
+
 To start the project make sure you have Python and Django installed, as well as the libraries required for JavaFX and MySQL DB Connectors.
 The .env file must be created locally and the server connection data provided.  
 Go to the terminal and give the following commands:  
@@ -30,12 +42,18 @@ Go to the terminal and give the following commands:
 4. cd django_server  
 5. python manage.py makemigrations  
 6. python manage.py migrate  
-7. python manage.py runserver  
+7. python manage.py runserver
 
-To start project for VideoCall you have to following these steps:
-1. Run aplication on ReactJS with: npm start devStart
-2. Open Browser and Type: localhost: 3000 
-- And to Create a User you should allow Camera/Microphone to create connection
-- First User: localhost: 3000
-- Second User: localhost: 3000/room
+The data that should be included in .env file:
+SECRET_KEY=django-insecure-yp%8^jus_*-6x#-+%48&sk_b197y!4-lz=h%tktmdd_231h5wl
+DEBUG=TRUE
+NAME=hermes_airline
+User=Your database username
+Pass=Your database password
+
+Required libraries that should be included to start the client side:
+1.JavaFx SDK
+2.MySQL connector
+3.JSON jar that supports org.json
+
 
