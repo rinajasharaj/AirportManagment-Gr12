@@ -1,30 +1,27 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<AnchorPane fx:id="ap_main" fx:controller="Application.Control.Controller"
-            prefHeight="396" prefWidth="478"
-            xmlns:fx="http://javafx.com/fxml">
+
+<AnchorPane fx:id="ap_main" prefHeight="399.0" prefWidth="478" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="Application.Control.Controller">
     <children>
         <Button fx:id="button_send" layoutX="404" layoutY="338" text="Send" />
-        <TextField fx:id="tf_message" layoutX="30" layoutY="338"
-                   prefWidth="361" prefHeight="26"/>
-        <ScrollPane fx:id="sp_main" layoutY="70" layoutX="30" prefHeight="259"
-                    prefWidth="418" fitToWidth="true">
+        <TextField fx:id="tf_message" layoutX="30.0" layoutY="338.0" prefHeight="26" prefWidth="361" />
+        <ScrollPane fx:id="sp_main" fitToWidth="true" layoutX="30" layoutY="70" prefHeight="259" prefWidth="418">
             <!--        <content />-->
             <VBox fx:id="vbox_messages" prefHeight="248" prefWidth="412" />
         </ScrollPane>
         <Label layoutX="114" layoutY="26" text="Messenger">
             <font>
-                <Font name="Arial Rounded MT Bold" size="23"></Font>
+                <Font name="Arial Rounded MT Bold" size="23" />
             </font>
         </Label>
+      <Button fx:id="backb" layoutX="405.0" layoutY="27.0" mnemonicParsing="false" text="Back" />
 
     </children>
 </AnchorPane>

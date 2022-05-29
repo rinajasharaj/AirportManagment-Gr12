@@ -20,15 +20,12 @@ public class MenuScene {
     private static VBox vbox;
     private static Label quoteLabel, welcomeLabel;
     private static ImageView img;
-    private static Button bookingsB, customersB, flightsB, planesB, exitB;
+    private static Button bookingsB, customersB, flightsB, planesB, chatB;
 
 
     //initialization of objects
     public static void initialize() {
-
-        //quoteLabel
-//        quoteLabel = new Label("\"The reason birds can fly and we can't is simply because\n " +
-//                "\t\t\tthey have perfect faith, for to have faith is to have wings..\"");
+        
         quoteLabel = new Label("\t\tWelcome to Prishtina \n " +
                 "\t\t\t\tInternational Airport");
         quoteLabel.setId("quote");
@@ -68,16 +65,16 @@ public class MenuScene {
         planesB.setAlignment(Pos.CENTER);
         planesB.getStyleClass().add("menu-button");
 
-        //EXITB
-        exitB = new Button("Exit");
-        exitB.setId("exit-button");
-        exitB.setAlignment(Pos.CENTER);
+        //ChatB
+        chatB = new Button("Chat");
+        chatB.setId("chat-button");
+        chatB.setAlignment(Pos.CENTER);
 
         //VBox
         vbox = new VBox(10);
         vbox.setAlignment(Pos.TOP_CENTER);
         vbox.relocate(940,320);
-        vbox.getChildren().addAll(bookingsB,customersB,flightsB,planesB,exitB);
+        vbox.getChildren().addAll(bookingsB,customersB,flightsB,planesB,chatB);
 
         //layout
         layout = new Pane();
@@ -132,8 +129,8 @@ public class MenuScene {
         return planesB;
     }
 
-    public static Button getExitB() {
-        return exitB;
+    public static Button getChatB() {
+        return chatB;
     }
 
 }

@@ -1,6 +1,7 @@
 package Application.Control;
 
 import Application.DataTypes.Client;
+import Presentation.ViewCustomersScene;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -37,6 +38,9 @@ public class Controller implements Initializable {
     @FXML
     private ScrollPane sp_main;
 
+    @FXML
+    private Button backb;
+
     private Client client;
 
 
@@ -57,6 +61,8 @@ public class Controller implements Initializable {
         });
 
         client.recieveMessageFromServer(vbox_messages);
+        //backB;
+        backb.setOnAction(e -> handle_backB());
 
         button_send.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -83,6 +89,8 @@ public class Controller implements Initializable {
             }
         });
     }
+    //back button action
+    public static void handle_backB(){ MainControl.showMenuScene(); }
 
     public static void addLabel(String msgFromServer, VBox vBox){
         HBox hBox = new HBox();
