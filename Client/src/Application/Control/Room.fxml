@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="560.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Room">
+<AnchorPane prefHeight="560.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Control.Room">
    <children>
       <StackPane layoutY="67.0" prefHeight="494.0" prefWidth="330.0">
          <children>
@@ -60,7 +60,7 @@
                   </Label>
                   <ImageView fx:id="proImage" fitHeight="84.0" fitWidth="83.0" layoutX="227.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/user.png" />
+                        <Image url="@../../icons/user.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="7.0" layoutY="250.0" text="Change Profile Picture:" textFill="#f8f5f5">
@@ -68,17 +68,17 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="fileChoosePath" editable="false" layoutX="9.0" layoutY="285.0" prefHeight="27.0" prefWidth="210.0" promptText="Choose Image..." style="-fx-background-color: #455a64;" styleClass="textField" stylesheets="@../Css/style.css">
+                  <TextField fx:id="fileChoosePath" editable="false" layoutX="9.0" layoutY="285.0" prefHeight="27.0" prefWidth="210.0" promptText="Choose Image..." style="-fx-background-color: #455a64;" styleClass="textField" stylesheets="@../../Css/style.css">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="232.0" layoutY="285.0" mnemonicParsing="false" onAction="#chooseImageButton" prefHeight="26.0" prefWidth="77.0" styleClass="allButton" stylesheets="@../Css/style.css" text="Choose">
+                  <Button layoutX="232.0" layoutY="285.0" mnemonicParsing="false" onAction="#chooseImageButton" prefHeight="26.0" prefWidth="77.0" styleClass="allButton" stylesheets="@../../Css/style.css" text="Choose">
                      <font>
                         <Font name="Arial" size="14.0" />
                      </font>
                   </Button>
-                  <Button layoutX="118.0" layoutY="397.0" mnemonicParsing="false" onAction="#saveImage" prefHeight="38.0" prefWidth="107.0" styleClass="allButton" stylesheets="@../Css/style.css" text="Save">
+                  <Button layoutX="118.0" layoutY="397.0" mnemonicParsing="false" onAction="#saveImage" prefHeight="38.0" prefWidth="107.0" styleClass="allButton" stylesheets="@../../Css/style.css" text="Save">
                      <font>
                         <Font name="Arial" size="19.0" />
                      </font>
@@ -87,7 +87,7 @@
             </Pane>
             <Pane fx:id="chat" prefHeight="200.0" prefWidth="330.0" style="-fx-background-color: #263238;">
                <children>
-                  <TextArea fx:id="msgRoom" editable="false" layoutX="-7.0" prefHeight="456.0" prefWidth="340.0" style="-fx-background-color: #263238;" styleClass="text-area" stylesheets="@../Css/style.css" wrapText="true">
+                  <TextArea fx:id="msgRoom" editable="false" layoutX="-7.0" prefHeight="456.0" prefWidth="340.0" style="-fx-background-color: #263238;" styleClass="text-area" stylesheets="@../../Css/style.css" wrapText="true">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
@@ -96,10 +96,10 @@
                      <children>
                         <ImageView fitHeight="42.0" fitWidth="73.0" layoutX="280.0" layoutY="-5.0" onMouseClicked="#handleSendEvent" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/icons8-sent.png" />
+                              <Image url="@../../icons/icons8-sent.png" />
                            </image>
                         </ImageView>
-                        <TextField fx:id="msgField" layoutX="2.0" layoutY="-2.0" onKeyPressed="#sendMessageByKey" prefHeight="38.0" prefWidth="274.0" promptText="Write messages here...." styleClass="msgBox" stylesheets="@../Css/style.css">
+                        <TextField fx:id="msgField" layoutX="2.0" layoutY="-2.0" onKeyPressed="#sendMessageByKey" prefHeight="38.0" prefWidth="274.0" promptText="Write messages here...." styleClass="msgBox" stylesheets="@../../Css/style.css">
                            <font>
                               <Font name="Arial" size="19.0" />
                            </font>
@@ -117,7 +117,7 @@
                   <Font name="Arial" size="19.0" />
                </font>
             </Label>
-            <Button fx:id="profileBtn" layoutX="257.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleProfileBtn" styleClass="allButton" stylesheets="@../Css/style.css" text="Profile">
+            <Button fx:id="profileBtn" layoutX="257.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleProfileBtn" styleClass="allButton" stylesheets="@../../Css/style.css" text="Profile">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
