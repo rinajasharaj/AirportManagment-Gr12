@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class MenuSceneControl {
 
     //fields
-    private static Button bookingsB, customersB, flightsB, planesB, chatB;
+    private static Button bookingsB, customersB, flightsB, planesB, chatB, groupChatB;
 
     //initialization of fields
     public static void initialize(){
@@ -32,6 +32,9 @@ public class MenuSceneControl {
         //exitB
         chatB = MenuScene.getChatB();
         chatB.setOnAction(e -> handle_ChatB());
+
+        groupChatB = MenuScene.getGroupChatB();
+        groupChatB.setOnAction(e -> handle_groupChatB());
 
     }
 
@@ -58,6 +61,10 @@ public class MenuSceneControl {
 
     //handle exitB
     public static void handle_ChatB(){
+        MainControl.showVideo();
+    }
+
+    public static void handle_groupChatB(){
         MainControl.showVideo();
     }
 

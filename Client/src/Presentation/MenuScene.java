@@ -20,7 +20,7 @@ public class MenuScene {
     private static VBox vbox;
     private static Label quoteLabel, welcomeLabel;
     private static ImageView img;
-    private static Button bookingsB, customersB, flightsB, planesB, chatB;
+    private static Button bookingsB, customersB, flightsB, planesB, chatB, groupChatB;
 
 
     //initialization of objects
@@ -70,11 +70,15 @@ public class MenuScene {
         chatB.setId("chat-button");
         chatB.setAlignment(Pos.CENTER);
 
+        groupChatB = new Button("Group");
+        groupChatB.setId("groupChat-button");
+        groupChatB.setAlignment(Pos.CENTER);
+
         //VBox
         vbox = new VBox(10);
         vbox.setAlignment(Pos.TOP_CENTER);
         vbox.relocate(940,320);
-        vbox.getChildren().addAll(bookingsB,customersB,flightsB,planesB,chatB);
+        vbox.getChildren().addAll(bookingsB,customersB,flightsB,planesB,chatB, groupChatB);
 
         //layout
         layout = new Pane();
@@ -131,6 +135,10 @@ public class MenuScene {
 
     public static Button getChatB() {
         return chatB;
+    }
+
+    public static Button getGroupChatB() {
+        return groupChatB;
     }
 
 }

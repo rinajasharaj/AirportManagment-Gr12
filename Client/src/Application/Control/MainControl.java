@@ -196,6 +196,10 @@ public class MainControl {
 
     }
 
+    public static void showChatGroup(){
+
+    }
+
 
     //getters
     public static Stage getWindow() {
