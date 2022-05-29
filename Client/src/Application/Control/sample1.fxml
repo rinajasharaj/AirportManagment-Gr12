@@ -116,7 +116,7 @@
             </Pane>
             <Pane fx:id="pnSignIn" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #263238;">
                <children>
-                  <TextField fx:id="userName" layoutX="69.0" layoutY="218.0" prefHeight="34.0" prefWidth="208.0" promptText="Username" style="-fx-background-color: #455a64; -fx-focus-traversable: green;" styleClass="txtFont" stylesheets="@../../Css/style.css">
+                  <TextField fx:id="userName" layoutX="69.0" layoutY="218.0" prefHeight="34.0" prefWidth="208.0" promptText="Username" style="-fx-background-color: #455a64;" styleClass="txtFont" stylesheets="@../../Css/style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
