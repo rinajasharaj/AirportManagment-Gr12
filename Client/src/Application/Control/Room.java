@@ -63,10 +63,13 @@ public class Room extends Thread implements Initializable {
     public ImageView proImage;
     @FXML
     public Circle showProPic;
+    @FXML
+    public Button backbtn;
+    
     private FileChooser fileChooser;
     private File filePath;
     public boolean toggleChat = false, toggleProfile = false;
-
+    
     BufferedReader reader;
     PrintWriter writer;
     Socket socket;
@@ -206,5 +209,7 @@ public class Room extends Thread implements Initializable {
         showProPic.setFill(new ImagePattern(image));
         clientName.setText(GroupController.username);
         connectSocket();
+        backbtn.setOnAction(e -> handle_backB());
     }
+    public static void handle_backB(){ MainControl.showMenuScene(); }
 }
