@@ -17,9 +17,9 @@ Kaloni në terminal dhe jepni komandat si në vazhdim:
 2. venv\Scripts\activate  
 3. pip install -r requirements.txt  
 4. cd django_server  
-5. python -m makemigrations  
-6. python -m migrate  
-7. python -m runserver  
+5. python manage.pyt makemigrations  
+6. python manage.py migrate  
+7. python manage.py runserver  
 
 To start the project make sure you have Python and Django installed, as well as the libraries required for JavaFX and MySQL DB Connectors.
 The .env file must be created locally and the server connection data provided.  
@@ -28,7 +28,7 @@ Go to the terminal and give the following commands:
 2. venv\Scripts\activate  
 3. pip install -r requirements.txt  
 4. cd django_server  
-5. python -m makemigrations  
-6. python -m migrate  
-7. python -m runserver  
+5. python manage.py makemigrations  
+6. python manage.py migrate  
+7. python manage.py runserver  
 
