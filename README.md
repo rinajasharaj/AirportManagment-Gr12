@@ -32,3 +32,10 @@ Go to the terminal and give the following commands:
 6. python manage.py migrate  
 7. python manage.py runserver  
 
+To start project for VideoCall you have to following these steps:
+1. Run aplication on ReactJS with: npm start devStart
+2. Open Browser and Type: localhost: 3000 
+- And to Create a User you should allow Camera/Microphone to create connection
+- First User: localhost: 3000
+- Second User: localhost: 3000/room
+
