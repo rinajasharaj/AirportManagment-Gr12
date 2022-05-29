@@ -65,7 +65,7 @@ public class MenuSceneControl {
     }
 
     public static void handle_groupChatB(){
-        MainControl.showVideo();
+        MainControl.showChatGroup();
     }
 
 }

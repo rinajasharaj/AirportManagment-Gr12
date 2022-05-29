@@ -1,4 +1,4 @@
-package Client;
+package Application.Control;
 
 public class User {
     public String name;

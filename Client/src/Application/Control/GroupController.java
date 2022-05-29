@@ -1,4 +1,4 @@
-package Client;
+package Application.Control;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,7 +17,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 //import animatefx.animation.FadeIn;
 
-public class Controller {
+public class GroupController {
+
     @FXML
     public Pane pnSignIn;
     @FXML

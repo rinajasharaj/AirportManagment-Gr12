@@ -1,4 +1,4 @@
-package Client;
+package Application.Control;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
@@ -26,7 +26,9 @@ import java.io.*;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
-import static Client.Controller.users;
+import static Application.Control.GroupController.users;
+import static Application.Control.User.*;
+
 //import animatefx.animation.FadeIn;
 //import animatefx.animation.FadeOut;
 
@@ -94,7 +96,7 @@ public class Room extends Thread implements Initializable {
                     fulmsg.append(tokens[i]);
                 }
                 System.out.println(fulmsg);
-                if (cmd.equalsIgnoreCase(Controller.username + ":")) {
+                if (cmd.equalsIgnoreCase(GroupController.username + ":")) {
                     continue;
                 } else if(fulmsg.toString().equalsIgnoreCase("bye")) {
                     break;
@@ -129,7 +131,7 @@ public class Room extends Thread implements Initializable {
 
     public void setProfile() {
         for (User user : users) {
-            if (Controller.username.equalsIgnoreCase(user.name)) {
+            if (GroupController.username.equalsIgnoreCase(user.name)) {
                 fullName.setText(user.fullName);
                 fullName.setOpacity(1);
                 email.setText(user.email);
@@ -149,7 +151,7 @@ public class Room extends Thread implements Initializable {
 
     public void send() {
         String msg = msgField.getText();
-        writer.println(Controller.username + ": " + msg);
+        writer.println(GroupController.username + ": " + msg);
         msgRoom.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
         msgRoom.appendText("Me: " + msg + "\n");
         msgField.setText("");
@@ -195,14 +197,14 @@ public class Room extends Thread implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         showProPic.setStroke(Color.valueOf("#90a4ae"));
         Image image;
-        if(Controller.gender.equalsIgnoreCase("Male")) {
+        if(GroupController.gender.equalsIgnoreCase("Male")) {
             image = new Image("icons/user.png", false);
         } else {
             image = new Image("icons/female.png", false);
             proImage.setImage(image);
         }
         showProPic.setFill(new ImagePattern(image));
-        clientName.setText(Controller.username);
+        clientName.setText(GroupController.username);
         connectSocket();
     }
 }

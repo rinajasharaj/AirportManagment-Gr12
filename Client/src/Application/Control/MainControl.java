@@ -198,6 +198,15 @@ public class MainControl {
 
     public static void showChatGroup(){
 
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(MainControl.class.getResource("sample1.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        window.setScene(new Scene(root, 390, 500));
+        window.setTitle("Client");
+
     }
 
 
