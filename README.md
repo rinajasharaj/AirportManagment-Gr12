@@ -22,16 +22,16 @@ Kaloni në terminal dhe jepni komandat si në vazhdim:
 7. python manage.py runserver  
 
 Të dhënat që duhet të përfshijë .env file:
-SECRET_KEY=django-insecure-yp%8^jus_*-6x#-+%48&sk_b197y!4-lz=h%tktmdd_231h5wl
-DEBUG=TRUE
-NAME=hermes_airline
-User=Your database username
-Pass=Your database password
+<br />SECRET_KEY=django-insecure-yp%8^jus_*-6x#-+%48&sk_b197y!4-lz=h%tktmdd_231h5wl
+<br />DEBUG=TRUE
+<br />NAME=hermes_airline
+<br />User=Your database username
+<br />Pass=Your database password
 
 Libraritë e nevojshme që duhen të përfshihen për të startuar klientin:
-1.JavaFx SDK
-2.MySQL connector
-3.JSON jar që suporton org.json
+1. JavaFx SDK
+2. MySQL connector
+3. JSON jar që suporton org.json
 
 To start the project make sure you have Python and Django installed, as well as the libraries required for JavaFX and MySQL DB Connectors.
 The .env file must be created locally and the server connection data provided.  
@@ -45,15 +45,15 @@ Go to the terminal and give the following commands:
 7. python manage.py runserver
 
 The data that should be included in .env file:
-SECRET_KEY=django-insecure-yp%8^jus_*-6x#-+%48&sk_b197y!4-lz=h%tktmdd_231h5wl
-DEBUG=TRUE
-NAME=hermes_airline
-User=Your database username
-Pass=Your database password
+<br />SECRET_KEY=django-insecure-yp%8^jus_*-6x#-+%48&sk_b197y!4-lz=h%tktmdd_231h5wl
+<br />DEBUG=TRUE
+<br />NAME=hermes_airline
+<br />User=Your database username
+<br />Pass=Your database password
 
 Required libraries that should be included to start the client side:
-1.JavaFx SDK
-2.MySQL connector
-3.JSON jar that supports org.json
+1. JavaFx SDK
+2. MySQL connector
+3. JSON jar that supports org.json
 
 
