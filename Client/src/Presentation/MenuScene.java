@@ -25,7 +25,7 @@ public class MenuScene {
 
     //initialization of objects
     public static void initialize() {
-        
+
         quoteLabel = new Label("\t\tWelcome to Prishtina \n " +
                 "\t\t\t\tInternational Airport");
         quoteLabel.setId("quote");

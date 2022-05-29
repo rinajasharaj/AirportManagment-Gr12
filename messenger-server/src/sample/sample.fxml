@@ -17,8 +17,9 @@
         prefWidth="361" prefHeight="26"/>
         <ScrollPane fx:id="sp_main" layoutY="70" layoutX="30" prefHeight="259"
                     prefWidth="418" fitToWidth="true">
-<!--        <content />-->
+        <content>
         <VBox fx:id="vbox_messages" prefHeight="248" prefWidth="412" />
+        </content>
         </ScrollPane>
         <Label layoutX="114" layoutY="26" text="Messenger">
             <font>
