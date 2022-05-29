@@ -76,7 +76,8 @@ public class Controller implements Initializable {
                     TextFlow textFlow = new TextFlow(text);
                     textFlow.setStyle("-fx-color: rgb(239,242,255); "+
                             "-fx-background-color: rgb(15,125,242); " +
-                            "-fx-background-radius: 20px;");
+                            "-fx-background-radius: 20px;1" +
+                            "-fx-font-size: 15px;");
                     textFlow.setPadding(new Insets(5,10,5,10));
                     text.setFill(Color.color(0.934,0.945,0.996));
 
@@ -100,7 +101,8 @@ public class Controller implements Initializable {
         Text text = new Text(msgFromServer);
         TextFlow textFlow = new TextFlow(text);
         textFlow.setStyle("-fx-background-color: rgb(233,233,235); " +
-                "-fx-background-radius: 20px;");
+                "-fx-background-radius: 20px;"+
+                "-fx-font-size: 15px;");
         textFlow.setPadding(new Insets(5,10,5,10));
         hBox.getChildren().add(textFlow);
 

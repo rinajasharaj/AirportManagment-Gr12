@@ -191,7 +191,7 @@ public class MainControl {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        window.setScene(new Scene(root, 478, 398));
+        window.setScene(new Scene(root, 390, 500));
         window.setTitle("Client");
 
     }
